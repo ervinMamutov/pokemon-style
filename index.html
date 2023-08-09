@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Pokemon Style</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">Header</header>
+      <main class="main">
+        <div class="user-input">
+          <input
+            type="number"
+            id="pokemon-id"
+            name="pokemon-id"
+            placeholder="enter Pokemon Id"
+          />
+          <button class="search" id="search-pokemon">Search</button>
+        </div>
+        <div id="root"></div>
+      </main>
+      <footer class="footer">Footer</footer>
+    </div>
+    <script type="module" src="./src/init.js"></script>
+  </body>
+</html>
