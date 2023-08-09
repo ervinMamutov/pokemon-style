@@ -1,16 +1,13 @@
 const createErrorComponent = () => {
-  const container = document.createElement("div");
-  const pokemonError = document.createElement("img");
-  pokemonError.classList.add("pokemon-error");
-  const title = document.createElement("h4");
-  const description = document.createElement("p");
+  const container = document.createElement('div');
+  const pokemonError = document.createElement('img');
+  pokemonError.classList.add('pokemon-error');
 
-  pokemonImg.src = data.sprites.other.home.front_default;
-  title.innerText = data.species.name;
-  description.innerText = data.moves[0].move.name;
-  console.log(description);
+  pokemonError.src = '../assets/noPokemon.png';
 
-  container.append(title, pokemonImg, description);
+  container.append(pokemonError);
 
   return container;
 };
+
+export default createErrorComponent;

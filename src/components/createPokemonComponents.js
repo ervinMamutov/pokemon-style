@@ -1,11 +1,12 @@
 const createPokemonComponents = (data) => {
-  const container = document.createElement("div");
-  const pokemonImg = document.createElement("img");
-  pokemonImg.classList.add("pokemon-img");
-  const title = document.createElement("h4");
-  const description = document.createElement("p");
+  const container = document.createElement('div');
+  const pokemonImg = document.createElement('img');
+  pokemonImg.classList.add('pokemon-img');
+  const title = document.createElement('h4');
+  const description = document.createElement('p');
 
   pokemonImg.src = data.sprites.other.home.front_default;
+  console.log(pokemonImg.src);
   title.innerText = data.species.name;
   description.innerText = data.moves[0].move.name;
   console.log(description);

@@ -8,20 +8,25 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">Header</header>
+      <header class="header">
+        <h1>Pokémon Style</h1>
+      </header>
       <main class="main">
-        <div class="user-input">
-          <input
-            type="number"
-            id="pokemon-id"
-            name="pokemon-id"
-            placeholder="enter Pokemon Id"
-          />
-          <button class="search" id="search-pokemon">Search</button>
+        <div class="center">
+          <div class="user-input">
+            <input
+              type="number"
+              id="pokemon-id"
+              name="pokemon-id"
+              placeholder="enter Pokemon Id"
+              class="user-input-holder"
+            />
+            <button class="search" id="search-pokemon">Search</button>
+          </div>
         </div>
         <div id="root"></div>
       </main>
-      <footer class="footer">Footer</footer>
+      <footer class="footer">No one built it. All Pokemon's intact.</footer>
     </div>
     <script type="module" src="./src/init.js"></script>
   </body>

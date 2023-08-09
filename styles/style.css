@@ -1,3 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P:regular);
+@import url(https://fonts.googleapis.com/css?family=Bangers:regular);
+@import url(https://fonts.googleapis.com/css?family=Luckiest+Guy:regular);
+@import url(https://fonts.googleapis.com/css?family=Boogaloo:regular);
+@import url(https://fonts.googleapis.com/css?family=Fredoka:300,regular,500,600,700);
+
 /*Reset Default*/
 * {
   padding: 0;
@@ -31,13 +37,18 @@ html,
 body {
   height: 100%;
   width: 100%;
+  margin: 0;
   font-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   line-height: 1;
   font-size: 16px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
 input,
 button,
 textarea {
@@ -89,7 +100,66 @@ h6 {
   flex: 1 1 auto;
 }
 
+.header {
+  margin: 30px;
+  display: flex;
+}
+
+h1 {
+  /* 
+  "Press Start 2P"
+  Bangers
+  Boogaloo
+  Luckiest Guy
+
+  */
+  font-family: Fredoka, sans-serif;
+  font-weight: 700;
+  color: yellow;
+  font-size: 36px;
+
+  position: relative;
+  display: inline-block;
+}
+
 .pokemon-img {
   height: 150px;
   width: 150px;
+}
+
+.pokemon-img:hover {
+  height: 200px;
+  width: auto;
+}
+
+.pokemon-error {
+  height: 350px;
+  width: auto;
+}
+
+.user-input-holder {
+  font-size: 14px;
+  color: #090ce1;
+  background: linear-gradient(to bottom, #ede9da, #ed9106);
+  text-align: center;
+}
+
+.user-input-holder::placeholder {
+  color: #7c7676; /* Customize the color */
+  text-align: center;
+}
+
+.search {
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transition effect for smooth color change */
+  border-radius: 20px;
+}
+
+/* Style for the button when pressed */
+.search:active {
+  background-color: #ff6600; /* Change the color when the button is pressed */
 }
