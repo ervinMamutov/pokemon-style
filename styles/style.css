@@ -6,77 +6,78 @@
 
 /*Reset Default*/
 * {
-  padding: 0;
-  margin: 0;
-  border: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 :focus,
 :active {
-  outline: none;
+    outline: none;
 }
 a:focus,
 a:active {
-  outline: none;
+    outline: none;
 }
 
 nav,
 footer,
 header,
 aside {
-  display: block;
+    display: block;
 }
 
 html,
 body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  font-size: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
-  font-size: 16px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-size: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    align-items: center;
+    line-height: 1;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 input,
 button,
 textarea {
-  font-family: inherit;
+    font-family: inherit;
 }
 
 input::-ms-clear {
-  display: none;
+    display: none;
 }
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
+    padding: 0;
+    border: 0;
 }
 a,
 a:visited {
-  text-decoration: none;
+    text-decoration: none;
 }
 a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 ul li {
-  list-style: none;
+    list-style: none;
 }
 img {
-  vertical-align: top;
+    vertical-align: top;
 }
 
 h1,
@@ -85,81 +86,178 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
-  font-weight: 400;
+    font-size: inherit;
+    font-weight: 400;
 }
 /*--------------------*/
 
 .wrapper {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
+    min-height: 100%;
+    display: flex;
+    padding: 20px;
+    margin: 10px;
+    flex-direction: column;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
 
 .main {
-  flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 .header {
-  margin: 30px;
-  display: flex;
+    margin: 30px;
+    display: flex;
 }
 
 h1 {
-  /* 
+    /* 
   "Press Start 2P"
   Bangers
   Boogaloo
   Luckiest Guy
 
   */
-  font-family: Fredoka, sans-serif;
-  font-weight: 700;
-  color: yellow;
-  font-size: 36px;
 
-  position: relative;
-  display: inline-block;
+    font-family: Fredoka, sans-serif;
+    font-weight: 700;
+    color: #ff0000;
+    font-size: 36px;
+    position: relative;
+    display: inline-block;
+    margin-left: 37px;
+}
+
+h4 {
+    font-family: Fredoka, sans-serif;
+    font-weight: 500;
+    color: yellow;
+    font-size: 24px;
+    position: relative;
+    display: inline-block;
+}
+
+/* description */
+
+.description {
+    font-family: Fredoka, sans-serif;
+    font-weight: 500;
+    color: yellow;
+    font-size: 24px;
+    position: relative;
+    display: inline-block;
+}
+
+/* pokemon error image */
+
+.pokemon-error {
+    height: 350px;
+    width: auto;
+}
+
+/* input */
+.user-input-holder {
+    background-color: #212121;
+    max-width: 190px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px rgb(249, 255, 85);
+}
+
+.user-input-holder:focus {
+    color: rgb(0, 255, 255);
+    background-color: #212121;
+    outline-color: rgb(0, 255, 255);
+    box-shadow: -3px -3px 15px rgb(0, 255, 255);
+    transition: 0.1s;
+    transition-property: box-shadow;
+}
+
+/* btn */
+.search {
+    display: inline-block;
+    width: 120px;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid #03045e;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+    margin-left: 10px;
+}
+
+.search::before,
+.search::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.search::before {
+    left: -10px;
+    background: #240046;
+}
+
+.search::after {
+    right: -10px;
+    background: #5a189a;
+}
+
+.search:hover::before,
+.search:hover::after {
+    width: 58%;
+}
+
+.search:hover span {
+    color: #e0aaff;
+    transition: 0.3s;
+}
+
+.search span {
+    color: #03045e;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+}
+
+/* pokemon img */
+
+.pokemon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .pokemon-img {
-  height: 150px;
-  width: 150px;
+    /* You can adjust the width and height as needed */
+    width: 250px;
+    height: 250px;
+    margin: 10px auto; /* Centers the image horizontally */
 }
 
 .pokemon-img:hover {
-  height: 200px;
-  width: auto;
+    height: 300px;
+    width: auto;
 }
 
-.pokemon-error {
-  height: 350px;
-  width: auto;
-}
+/* footer */
 
-.user-input-holder {
-  font-size: 14px;
-  color: #090ce1;
-  background: linear-gradient(to bottom, #ede9da, #ed9106);
-  text-align: center;
-}
-
-.user-input-holder::placeholder {
-  color: #7c7676; /* Customize the color */
-  text-align: center;
-}
-
-.search {
-  background-color: #ff9900;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Transition effect for smooth color change */
-  border-radius: 20px;
-}
-
-/* Style for the button when pressed */
-.search:active {
-  background-color: #ff6600; /* Change the color when the button is pressed */
+.footer-pokemon {
+    font-family: Fredoka, sans-serif;
+    font-weight: 400;
+    color: rgb(255, 159, 57);
+    font-size: 16px;
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    text-align: center;
 }
