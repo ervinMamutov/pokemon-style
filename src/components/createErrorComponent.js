@@ -3,7 +3,7 @@ const createErrorComponent = () => {
   const pokemonError = document.createElement('img');
   pokemonError.classList.add('pokemon-error');
 
-  pokemonError.src = '../assets/noPokemon.webp';
+  pokemonError.src = './assets/noPokemon.webp';
 
   container.append(pokemonError);
 

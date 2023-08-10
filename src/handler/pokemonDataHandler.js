@@ -17,7 +17,6 @@ const pokemonDataHandler = async () => {
     dom.root.append(pokemonError);
     return;
   }
-  const idPokemon = data.id;
 
   const pokemon = createPokemonComponents(data);
   dom.root.innerText = '';
