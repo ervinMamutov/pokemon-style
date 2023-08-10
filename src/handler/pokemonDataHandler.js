@@ -6,7 +6,7 @@ import pokemonIdControl from '../data/data.js';
 
 const pokemonDataHandler = async () => {
   const inputId = dom.inputId.value;
-  if (pokemonIdControl.pokemonId === inputId) {
+  if (pokemonIdControl.pokemonId === inputId || inputId === '') {
     return;
   }
   const data = await pokemonDataApi(inputId);
