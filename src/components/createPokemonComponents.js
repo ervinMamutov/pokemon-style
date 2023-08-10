@@ -9,10 +9,8 @@ const createPokemonComponents = (data) => {
   description.classList.add('description');
 
   pokemonImg.src = data.sprites.other.home.front_default;
-  console.log(pokemonImg.src);
   title.innerText = data.species.name;
   description.innerText = data.moves[0].move.name;
-  console.log(description);
 
   container.append(title, pokemonImg, description);
 
