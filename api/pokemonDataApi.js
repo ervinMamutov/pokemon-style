@@ -5,7 +5,7 @@ const pokemonDataApi = async (id = 4) => {
     if (!res.ok) {
       throw new Error(`Failed to get photos with status : ${res.status}`);
     }
-    const pokemon = res.json();
+    const pokemon = await res.json();
     return pokemon;
   } catch (err) {
     console.error(err);
