@@ -1,5 +1,5 @@
 import dom from '../data/dom.js';
-import pokemonDataApi from '../api/pokemonDataApi.js';
+import pokemonDataApi from '../../apis/pokemonDataApi.js';
 import createPokemonComponents from '../components/createPokemonComponents.js';
 import createErrorComponent from '../components/createErrorComponent.js';
 import pokemonIdControl from '../data/data.js';
